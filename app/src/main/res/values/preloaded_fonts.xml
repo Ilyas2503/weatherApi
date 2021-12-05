@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/abeezee_italic</item>
+        <item>@font/aclonica</item>
+        <item>@font/allan</item>
+        <item>@font/allura</item>
+        <item>@font/bigshot_one</item>
+        <item>@font/bungee_hairline</item>
+        <item>@font/cookie</item>
+        <item>@font/mrs_saint_delafield</item>
+    </array>
+</resources>

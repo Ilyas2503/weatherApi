@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.weatherFragment.WeatherFragment">
+
+    <ImageView
+        android:id="@+id/sky_iv"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sky"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_cv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="310dp"
+        android:backgroundTint="#F1F3F2"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextClock
+            android:id="@+id/data_tc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/allura"
+            android:format24Hour="EEEE, dd MMMM yyyy | HH:mm"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/bish_btn"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="270dp"
+            android:background="@drawable/bish_bg"
+            android:text="Bishkek"
+            android:textColor="#30D0E6" />
+
+        <LinearLayout
+            android:id="@+id/linear_ll"
+            android:layout_width="120dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/cloud_iv"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="45dp"
+                android:src="@drawable/ic_vector__1_" />
+
+            <TextView
+                android:id="@+id/sunny_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:text="Sunny"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/group_iv"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_group_1" />
+
+            <TextView
+                android:id="@+id/percent_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:text="49%"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/humid_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="Humidity" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/il_group__1_" />
+
+            <TextView
+                android:id="@+id/clock_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:text="6:03 AM"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/sun_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:text="Sunrise" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear2_ll"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/ralative_rl"
+                android:layout_width="100dp"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:id="@+id/number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:fontFamily="@font/cookie"
+                    android:text="33"
+                    android:textColor="@color/black"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/circle_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="˚"
+                    android:textSize="55sp" />
+
+                <TextView
+                    android:id="@+id/C_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="3dp"
+                    android:text="C"
+                    android:textSize="30sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear3_ll"
+            android:layout_width="125dp"
+            android:layout_height="195dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/speed_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/ic_group" />
+
+            <TextView
+                android:id="@+id/mBaa_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="1,007mBar"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/pressure_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="2dp"
+                android:text="Pressure" />
+
+            <ImageView
+                android:id="@+id/group3_iv"
+                android:layout_width="35dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="22dp"
+                android:src="@drawable/ic_group__2_" />
+
+            <TextView
+                android:id="@+id/clock1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="2dp"
+                android:text="7:05 PN"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/sunset_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="1dp"
+                android:text="Sunset" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/liner4_ll"
+            android:layout_width="120dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="290dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/grad_iv"
+                android:layout_width="35dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic__5_c" />
+
+            <ImageView
+                android:id="@+id/grad1_iv"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic__7_c" />
+
+            <ImageView
+                android:id="@+id/wind_iv"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/ic__01_wind_1" />
+
+
+            <TextView
+                android:id="@+id/km_h_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="23 KM/h"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:text="wind" />
+
+            <ImageView
+                android:id="@+id/sandbox_iv"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/ic_vector__3_" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:text="13h 1m"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Daytime" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mater2_tv"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="618dp"
+        android:layout_marginEnd="270dp"
+        android:layout_marginBottom="50dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic__07_sunny_1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="35dp"
+            android:text="Mon,21"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:text="35˚C 26˚C" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/material1_mc"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="618dp"
+        android:layout_marginBottom="50dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/material_mc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/cloud1_iv"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_vector__1_" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="35dp"
+            android:text="Tue,22"
+            android:textColor="@color/black" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:text="35˚C 27˚C" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/material_mc"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="618dp"
+        android:layout_marginBottom="50dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/material1_mc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/hazy_iv"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic__16_hazy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp"
+            android:text="Wed,22"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:text="34˚C 29˚C"
+
+            />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
