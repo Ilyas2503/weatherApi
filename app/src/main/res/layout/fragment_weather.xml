@@ -232,14 +232,14 @@
             android:layout_marginTop="40dp"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/grad_iv"
+            <TextView
+                android:id="@+id/grad_tv"
                 android:layout_width="35dp"
                 android:layout_height="28dp"
                 android:layout_marginStart="10dp"
                 android:src="@drawable/ic__5_c" />
 
-            <ImageView
+            <TextView
                 android:id="@+id/grad1_iv"
                 android:layout_width="35dp"
                 android:layout_height="25dp"
@@ -418,6 +418,16 @@
 
 
     </com.google.android.material.card.MaterialCardView>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 

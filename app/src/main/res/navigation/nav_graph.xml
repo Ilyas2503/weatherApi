@@ -9,5 +9,38 @@
         android:id="@+id/weatherFragment"
         android:name="com.example.weatherapi.ui.weatherFragment.WeatherFragment"
         android:label="fragment_weather"
-        tools:layout="@layout/fragment_weather" />
+        tools:layout="@layout/fragment_weather" >
+
+        <argument android:name="latitude"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="38.8951"/>
+
+        <argument android:name="longitude"
+            app:nullable="true"
+            app:argType="string"
+            android:defaultValue=" -77.0364"/>
+        <action
+            android:id="@+id/action_weatherFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.weatherapi.ui.Map.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment" >
+
+            <argument android:name="latitude"
+                app:argType="string"
+                app:nullable="true"/>
+
+            <argument android:name="longitude"
+                app:nullable="true"
+                app:argType="string" />
+
+        </action>
+    </fragment>
 </navigation>
